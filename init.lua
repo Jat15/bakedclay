@@ -65,6 +65,9 @@ for _, clay in pairs(clay) do
 			clay[2] .. " Baked Clay Slab",
 			default.node_sound_stone_defaults())
 	end
+	if minetest.get_modpath("letters") then
+		letters.register_letters("bakedclay", "baked_clay_" .. clay[1], "bakedclay:" .. clay[1], clay[2] .. " Baked Clay", "baked_clay_" .. clay[1] ..".png")
+	end
 end
 
 -- cook clay block into white baked clay
